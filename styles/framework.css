@@ -16,23 +16,6 @@
 */
 
 
-/* ------- Planning CSS ----- */
-
-.borderrow {
-    border: 2px solid black;
-}
-
-.border {
-    border: 1px solid black;
-    background: lightgray;
-    padding: 2px;
-    margin: 1px;
-}
-
-
-/* ----- end planning CSS ---- */
-
-
 /* ------- 1.0 Mobile ------- */
 
 * {
@@ -120,8 +103,21 @@ ul {
 }
 
 
-
 /* ------- 1.1 Nav ------- */
+
+
+
+nav ul li a {
+    text-decoration: none;
+
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 
 
 /* ------- 2.0 Tablet ------- */
@@ -164,6 +160,20 @@ ul {
         width: 100%;
     }
     /* ------- 2.1 Nav ------- */
+    nav>ul {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    nav>ul>li {
+        flex-grow: 1;
+        flex-basis: 50%;
+    }
+    .navLeft {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 
@@ -207,4 +217,21 @@ ul {
         width: 100%;
     }
     /* ------- 3.1 Nav ------- */
+    nav {
+        flex-direction: row;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .navLeft {
+        order: 1
+    }
+    nav>a {
+        order: 2;
+    }
+    .navRight {
+        order: 3;
+    }
 }
